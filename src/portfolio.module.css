@@ -1,0 +1,68 @@
+/* Root Background */
+#root {
+    background-color: rgb(0, 0, 0);
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.navBar {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation List */
+.navList {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navList li {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.navList li:hover {
+    color: #007bff;
+}
+
+/* Profile Section */
+.profileSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px auto;
+    max-width: 800px;
+    gap: 50px;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Profile Image */
+.profileImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 10px;
+    border: 2px solid white;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
