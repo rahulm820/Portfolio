@@ -125,6 +125,15 @@ export const projects = [
     metrics: 'Low-latency P2P streaming',
     featured: true,
   },
+  {
+    id: 'project-13',
+    title: 'Decentralized Paywall — x402-Stacks',
+    description: 'Engineered a full-stack decentralized content monetization platform utilizing the HTTP 402 "Payment Required" protocol on the Stacks blockchain. Implemented an automated access control system that triggers on-chain STX transactions via the Hiro wallet, verifies payments against the blockchain API, and grants access to AES-encrypted premium content without intermediaries.',
+    tech: ['React.js', 'Node.js', 'Stacks/STX', 'MongoDB', 'Web3'],
+    category: 'Full Stack',
+    metrics: 'Trustless on-chain access control',
+    featured: false,
+  },
 ];
 
 export const projectCategories = [
