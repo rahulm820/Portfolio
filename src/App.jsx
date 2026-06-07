@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
-import Home from "./components/Home"
+import { useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import NotFound from './components/NotFound';
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -7,22 +9,25 @@ function App() {
       const stored = localStorage.getItem('theme');
       if (stored) return stored;
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
-    } catch (e) {}
-    return 'light';
+    } catch (e) { /* ignore */ }
+    return 'dark'; // Default to dark (editorial dark direction)
   });
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    try { localStorage.setItem('theme', theme); } catch (e) {}
+    try { localStorage.setItem('theme', theme); } catch (e) { /* ignore */ }
   }, [theme]);
 
   const toggleTheme = () => setTheme(t => t === 'dark' ? 'light' : 'dark');
 
   return (
-    <>
-      <Home toggleTheme={toggleTheme} theme={theme} />
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home toggleTheme={toggleTheme} theme={theme} />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
