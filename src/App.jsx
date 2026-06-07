@@ -21,7 +21,7 @@ function App() {
   const toggleTheme = () => setTheme(t => t === 'dark' ? 'light' : 'dark');
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<Home toggleTheme={toggleTheme} theme={theme} />} />
         <Route path="*" element={<NotFound />} />
