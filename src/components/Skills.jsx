@@ -58,7 +58,7 @@ export default function Skills() {
         </div>
 
         {/* Proficiency legend */}
-        <div className="proficiency-legend">
+        {/* <div className="proficiency-legend">
           {Object.entries(proficiencyLevels).map(([label, level]) => (
             <div className="legend-item" key={label}>
               <div className="legend-dots">
@@ -69,7 +69,7 @@ export default function Skills() {
               <span className="legend-label">{label}</span>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
