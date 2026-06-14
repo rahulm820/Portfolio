@@ -7,6 +7,8 @@ import certCodeClash from '../assets/CodeClash Participation.pdf';
 import certNvidia from '../assets/Nvidia Deep Learning Certificate.pdf';
 import certFlipkart from '../assets/FlipKart Grid Participation Certificate.pdf';
 import certTata from '../assets/TATA Imagination Challenge particiaption.pdf';
+import certAWS from '../assets/Coursera AWS Cloud Technology Consultant.pdf';
+import certDesignThinking from '../assets/SkillUp Design Thinking.pdf';
 
 export const certifications = [
   {
@@ -108,6 +110,28 @@ export const certifications = [
     verifyUrl: certTata,
     category: 'Development',
   },
+  {
+    id: 'cert-10',
+    title: 'AWS Cloud Technology Consultant',
+    org: 'Coursera / AWS',
+    orgInitials: 'AWS',
+    orgColor: '#FF9900',
+    date: '2025',
+    credentialId: 'View Document',
+    verifyUrl: certAWS,
+    category: 'Cloud',
+  },
+  {
+    id: 'cert-11',
+    title: 'Design Thinking',
+    org: 'SkillUp',
+    orgInitials: 'SU',
+    orgColor: '#E63946',
+    date: '2025',
+    credentialId: 'View Document',
+    verifyUrl: certDesignThinking,
+    category: 'Development',
+  },
 ];
 
-export const certCategories = ['All', 'AI / ML', 'Data', 'Development'];
+export const certCategories = ['All', 'AI / ML', 'Cloud', 'Data', 'Development'];
