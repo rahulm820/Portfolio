@@ -6,6 +6,7 @@ const actions = [
   { id: 'about', title: 'Go to About', href: '#about', icon: '👤', category: 'Navigation' },
   { id: 'skills', title: 'Go to Skills', href: '#skills', icon: '⚡', category: 'Navigation' },
   { id: 'projects', title: 'Go to Projects', href: '#projects', icon: '📂', category: 'Navigation' },
+  { id: 'open-source', title: 'Go to Open Source', href: '#open-source', icon: '🌿', category: 'Navigation' },
   { id: 'certifications', title: 'Go to Certifications', href: '#certifications', icon: '🏆', category: 'Navigation' },
   { id: 'contact', title: 'Go to Contact', href: '#contact', icon: '✉️', category: 'Navigation' },
   { id: 'resume', title: 'Download Resume', href: '/Rahul Madhawani.pdf', icon: '📄', category: 'Actions', external: true },

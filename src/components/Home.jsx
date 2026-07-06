@@ -4,6 +4,7 @@ import Hero from './Hero';
 import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
+import OpenSource from './OpenSource';
 import Certifications from './Certifications';
 import Contact from './Contact';
 import Footer from './Footer';
@@ -46,6 +47,7 @@ export default function Home({ toggleTheme, theme }) {
         <About />
         <Skills />
         <Projects />
+        <OpenSource />
         <Certifications />
         <Contact />
       </main>
