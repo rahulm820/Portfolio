@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import profileImg from '../assets/profile.png';
 import resumePdf from '../assets/Rahul Madhawani.pdf';
 import './hero.css';
@@ -31,45 +31,6 @@ const heroSocials = [
   { name: 'HackerRank', url: 'https://www.hackerrank.com/profile/rahulmadhawani21', icon: 'hackerrank' },
   { name: 'GitHub', url: 'https://github.com/rahulm820', icon: 'github', color: '888888' },
 ];
-
-const stats = [
-  { value: 4, suffix: '+', label: 'Projects Shipped' },
-  { value: 12, suffix: '+', label: 'Technologies' },
-  { value: 4, suffix: '+', label: 'Certifications' },
-  { value: 8.48, suffix: '', label: 'CGPA' },
-];
-
-function useCountUp(target, duration = 1500) {
-  const [count, setCount] = useState(0);
-  const [started, setStarted] = useState(false);
-  const ref = useRef(null);
-  const isFloat = target % 1 !== 0;
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setStarted(true); observer.disconnect(); } },
-      { threshold: 0.5 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!started) return;
-    let start = 0;
-    const step = target / (duration / 16);
-    const interval = setInterval(() => {
-      start += step;
-      if (start >= target) { setCount(target); clearInterval(interval); }
-      else setCount(isFloat ? parseFloat(start.toFixed(2)) : Math.floor(start));
-    }, 16);
-    return () => clearInterval(interval);
-  }, [started, target, duration, isFloat]);
-
-  return { count, ref };
-}
 
 export default function Hero() {
   const roleIdx = useRef(0);
@@ -108,8 +69,6 @@ export default function Hero() {
     tick();
     return () => clearTimeout(timeout);
   }, []);
-
-  const counters = stats.map(s => useCountUp(s.value));
 
   return (
     <section id="home" className="hero section">
@@ -196,18 +155,6 @@ export default function Hero() {
               })}
             </div>
           </div>
-        </div>
-
-        {/* Stats strip */}
-        <div className="stats-strip reveal">
-          {stats.map((s, i) => (
-            <div className="stat-item" key={s.label} ref={counters[i].ref}>
-              <span className="stat-value">
-                {counters[i].count}{s.suffix}
-              </span>
-              <span className="stat-label">{s.label}</span>
-            </div>
-          ))}
         </div>
 
         {/* Scroll indicator */}
