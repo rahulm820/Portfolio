@@ -45,7 +45,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-accent), #A78BFA);
+  background: var(--gradient-accent);
   opacity: 0;
   transition: opacity 0.3s ease;
 }

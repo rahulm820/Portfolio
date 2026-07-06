@@ -25,6 +25,13 @@ const roles = [
   'Backend Developer',
 ];
 
+const heroSocials = [
+  { name: 'LeetCode', url: 'https://leetcode.com/u/rahulmadhawani2004/', icon: 'leetcode' },
+  { name: 'Codeforces', url: 'https://codeforces.com/profile/rahulmadhawani2004', icon: 'codeforces' },
+  { name: 'HackerRank', url: 'https://www.hackerrank.com/profile/rahulmadhawani21', icon: 'hackerrank' },
+  { name: 'GitHub', url: 'https://github.com/rahulm820', icon: 'github', color: '888888' },
+];
+
 const stats = [
   { value: 4, suffix: '+', label: 'Projects Shipped' },
   { value: 12, suffix: '+', label: 'Technologies' },
@@ -136,6 +143,29 @@ export default function Hero() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
                 Contact
               </a>
+            </div>
+
+            {/* Social profiles */}
+            <div className="hero-socials">
+              {heroSocials.map(s => (
+                <a
+                  key={s.name}
+                  className="hero-social"
+                  href={s.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={s.name}
+                  title={s.name}
+                >
+                  <img
+                    src={`https://cdn.simpleicons.org/${s.icon}${s.color ? `/${s.color}` : ''}`}
+                    alt=""
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                  />
+                </a>
+              ))}
             </div>
           </div>
 
