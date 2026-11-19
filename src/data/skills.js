@@ -31,6 +31,7 @@ export const skills = [
   { name: 'Web Scraping', category: 'Tools', proficiency: 'Proficient', iconType: 'lucide', icon: 'Globe' },
   { name: 'NLP', category: 'Tools', proficiency: 'Familiar', iconType: 'lucide', icon: 'MessageSquareText' },
   { name: 'Linux', category: 'Tools', proficiency: 'Familiar', iconType: 'devicon', icon: 'linux/linux-original' },
+  { name: 'Wireshark', category: 'Tools', proficiency: 'Familiar', iconType: 'lucide', icon: 'Activity' },
 ];
 
 export const skillCategories = [

@@ -6,6 +6,7 @@ import Skills from './Skills';
 import Projects from './Projects';
 import OpenSource from './OpenSource';
 import Certifications from './Certifications';
+import Publications from './Publications';
 import Contact from './Contact';
 import Footer from './Footer';
 import CommandPalette from './CommandPalette';
@@ -48,6 +49,7 @@ export default function Home({ toggleTheme, theme }) {
         <Skills />
         <Projects />
         <OpenSource />
+        <Publications />
         <Certifications />
         <Contact />
       </main>

@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Smartphone, Network, Bot, Boxes, Globe, MessageSquareText, Cloud } from 'lucide-react';
+import { Smartphone, Network, Bot, Boxes, Globe, MessageSquareText, Cloud, Activity } from 'lucide-react';
 import { skills, skillCategories } from '../data/skills';
 import './skills.css';
 
-const lucideMap = { Smartphone, Network, Bot, Boxes, Globe, MessageSquareText, Cloud };
+const lucideMap = { Smartphone, Network, Bot, Boxes, Globe, MessageSquareText, Cloud, Activity };
 
 function SkillIcon({ skill }) {
   if (skill.iconType === 'lucide') {
