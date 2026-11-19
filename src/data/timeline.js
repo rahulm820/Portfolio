@@ -1,5 +1,13 @@
 export const timeline = [
   {
+    id: 'tl-0',
+    dateRange: '2026 – Present',
+    org: 'Personal Project',
+    role: 'RockPaperScissors',
+    description: 'Currently building RockPaperScissors, an in-progress project.',
+    tag: 'Project',
+  },
+  {
     id: 'tl-1',
     dateRange: '2025',
     org: 'Passion Infotech Pvt Ltd',
