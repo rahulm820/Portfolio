@@ -10,4 +10,15 @@ export const contributions = [
     prUrl: 'https://github.com/topoteretes/cognee-rs/pull/25',
     status: 'Merged',
   },
+  {
+    id: 'oss-2',
+    repo: 'kestra-io/kestra',
+    repoDescription: 'Kestra — the open-source orchestration and scheduling platform',
+    title: 'PausedAlert info box on the execution Overview page',
+    description: 'Added a warning alert on the execution Overview page when an execution is in the PAUSED state, prompting the user to validate and resume it. Built as a new PausedAlert component styled to match the existing ErrorAlert, and wired into Overview.vue. Added the new i18n keys across all 13 locale files.',
+    tech: ['Vue', 'TypeScript', 'i18n'],
+    pr: 20220,
+    prUrl: 'https://github.com/kestra-io/kestra/pull/20220',
+    status: 'Merged',
+  },
 ];
